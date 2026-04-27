@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <h1>☂️ Umbrella</h1>
+        <div id="gridBadge" class="grid-badge">Grid: Checking...</div>
+        <div class="stats">
+            <span>CO2 Saved: </span>
+            <span id="totalSaved">0.00</span><span>g</span>
+        </div>
+    </div>
+
+    <textarea id="promptInput" placeholder="Type your AI prompt here..."></textarea>
+    
+    <button id="submitBtn">Submit Sustainably</button>
+    
+    <div id="statusText"></div>
+
+    <div class="response-container">
+        <div class="meta-info" id="metaInfo"></div>
+        <div id="aiResponse">Your green response will appear here.</div>
+        <button id="copyBtn" class="copy-btn" style="display: none;">Copy Answer</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

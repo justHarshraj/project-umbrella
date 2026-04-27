@@ -1,0 +1,118 @@
+body {
+    width: 350px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 15px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: 18px;
+    margin: 0;
+    color: #4ade80; /* Green theme */
+}
+.stats {
+    font-size: 11px;
+    background: #1e1e1e;
+    padding: 5px 8px;
+    border-radius: 12px;
+    border: 1px solid #4ade80;
+}
+.grid-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.grid-green { border: 1px solid #4ade80; color: #4ade80; }
+.grid-yellow { border: 1px solid #facc15; color: #facc15; }
+.grid-red { border: 1px solid #f87171; color: #f87171; }
+textarea {
+    width: 100%;
+    height: 80px;
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    margin-bottom: 10px;
+}
+button {
+    width: 100%;
+    background: #4ade80;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    background: #22c55e;
+}
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+#statusText {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    margin: 10px 0;
+    height: 15px;
+}
+.response-container {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+    min-height: 100px;
+    max-height: 350px; /* Forces the box to stop growing */
+    overflow-y: auto;  /* Adds a vertical scrollbar if text is too long */
+    display: flex;
+    flex-direction: column;
+}
+.meta-info {
+    font-size: 10px;
+    color: #4ade80;
+    margin-bottom: 5px;
+    font-family: monospace;
+}
+#aiResponse {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Copy Button Styles */
+.copy-btn {
+    background: transparent;
+    color: #4ade80;
+    border: 1px solid #4ade80;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.copy-btn:hover {
+    background: #4ade80;
+    color: #121212;
+    font-weight: bold;
+}

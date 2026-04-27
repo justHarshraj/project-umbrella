@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Project Umbrella",
+  "version": "1.0",
+  "description": "Green AI Router: Optimizes prompts and routes to the cleanest energy grid.",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
