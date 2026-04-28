@@ -37,6 +37,34 @@ You can run this extension on your own machine in 3 easy steps:
 3. **Concurrent Processing:** Simultaneously fetches grid cleanliness data while optimizing the prompt.
 4. **Execution & Math Engine:** Routes to the greenest grid, calculates token/character deltas, applies downscale bonuses, and returns the response.
 
+```mermaid
+graph TD
+    A[User Types Prompt] -->|Intercepts| B(Chrome Extension)
+    B --> C{Umbrella Gateway}
+    C -->|Simultaneous| D[WattTime API: Find Greenest Grid]
+    C -->|Simultaneous| E[Groq API 8B: Minify Prompt]
+    D --> F{Decision Engine}
+    E --> F
+    F -->|Simple Query| G[Downscale to 8B Model]
+    F -->|Complex Query| H[Maintain 70B Model]
+    G --> I[Execute on Greenest Grid]
+    H --> I
+    I --> J[Calculate Carbon Saved]
+    J --> K([Return Answer & Update UI])
+    
+    style C fill:#4ade80,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#a7f3d0,stroke:#333,color:#000
+    style I fill:#34d399,stroke:#333,stroke-width:2px,color:#000
+```
+
+## 🏆 Why It Matters (The Impact)
+
+Most AI tools blindly execute heavy models regardless of the query's complexity, wasting massive amounts of energy. 
+- **The Overhead:** 1 query on a 70B model uses significantly more energy than an 8B model. 
+- **The Grid Problem:** AI Inference currently relies heavily on dirty, fossil-fuel-powered data centers.
+
+By intelligently intercepting, minifying, and eco-routing queries to renewable energy grids, Umbrella proves that we don't have to sacrifice AI performance for environmental sustainability. Every query saved is a step towards **Net-Zero AI**.
+
 ## 💻 Tech Stack
 
 * **Frontend:** HTML, CSS, Vanilla JS (Manifest V3 Chrome Extension)
