@@ -24,7 +24,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
     document.getElementById('copyBtn').style.display = "none";
 
     try {
-        const response = await fetch('http://localhost:3000/api/green-query', {
+        const response = await fetch('https://project-umbrella-08ov.onrender.com/api/green-query', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ originalPrompt: prompt })

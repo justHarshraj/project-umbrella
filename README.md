@@ -8,6 +8,20 @@
 > 
 > **The Solution:** Project Umbrella intercepts your AI queries, minifies them, and dynamically routes them to the global server grid currently running on the cleanest renewable energy.
 
+## 🎥 Live Demo & Installation
+
+Since the Chrome Web Store review process takes 2+ days, we have provided the fully functional extension here for the hackathon judges! 
+
+**1. Watch the Demo Video:**
+[👉 Click here to watch the 2-minute Project Umbrella demo on YouTube]((INSERT_YOUR_YOUTUBE_LINK_HERE))
+
+**2. Test it Yourself (Local Installation):**
+You can run this extension on your own machine in 3 easy steps:
+1. Download the `Project-Umbrella-Extension.zip` file from this repository and extract it.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Turn on **Developer mode** (top right), click **Load unpacked**, and select the extracted folder. 
+*Note: The extension is fully connected to our live Render backend!*
+
 ## ✨ Core Features
 
 * **⚡️ The Prompt Minifier:** Uses a lightning-fast intermediary model (`llama-3.1-8b-instant`) to aggressively strip conversational filler from your prompt, preserving only the core instructions to reduce compute overhead.
