@@ -89,14 +89,15 @@ app.post('/api/green-query', async (req, res) => {
         // Step 4: The Advanced Math Engine (Calculating Savings)
         const charactersSaved = originalPrompt.length - optimizedPrompt.length;
         
-        // Base savings from shrinking the prompt
-        const baselineSavings = (charactersSaved > 0 ? charactersSaved : 0) * 0.05;
+        // Base savings from shrinking the prompt (if any)
+        const promptShrinkSavings = (charactersSaved > 0 ? charactersSaved : 0) * 0.05;
         
-        // Multiplier from the WattTime Grid Cleanliness
-        const gridMultiplier = (100 - greenestGrid.emissionRating) / 100; 
+        // Savings from routing to a greener grid (based on total prompt size)
+        const gridCleanlinessMultiplier = (100 - greenestGrid.emissionRating) / 100;
+        const gridRoutingSavings = originalPrompt.length * 0.02 * gridCleanlinessMultiplier;
 
-        // TOTAL: (Prompt Shrink * Grid Cleanliness) + Model Downscale Bonus
-        const totalSavedGrams = ((baselineSavings * gridMultiplier) + modelDownscaleBonus).toFixed(2);
+        // TOTAL: Prompt Shrink + Grid Routing + Model Downscale
+        const totalSavedGrams = (promptShrinkSavings + gridRoutingSavings + modelDownscaleBonus).toFixed(2);
 
         res.json({
             success: true,
