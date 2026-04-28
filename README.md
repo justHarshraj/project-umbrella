@@ -13,7 +13,7 @@
 Since the Chrome Web Store review process takes 2+ days, we have provided the fully functional extension here for the hackathon judges! 
 
 **1. Watch the Demo Video:**
-[👉 Click here to watch the 2-minute Project Umbrella demo on YouTube]((INSERT_YOUR_YOUTUBE_LINK_HERE))
+[👉 Click here to watch the 2-minute Project Umbrella demo on YouTube](https://youtu.be/Exl0DyCB1zU)
 
 **2. Test it Yourself (Local Installation):**
 You can run this extension on your own machine in 3 easy steps:
